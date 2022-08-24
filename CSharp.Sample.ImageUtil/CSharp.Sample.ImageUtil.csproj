@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\Fonts\PingFang Bold.ttf" />
+    <None Remove="Resources\Fonts\PingFang Heavy.ttf" />
+    <None Remove="Resources\Fonts\PingFang Medium.ttf" />
+    <None Remove="Resources\Fonts\PingFang Regular.ttf" />
+    <None Remove="Resources\ShareCardFor_ChouJiangHuoDong\button_JinBiChouJiang_120x28%403x.png" />
+    <None Remove="Resources\ShareCardFor_ChouJiangHuoDong\image_PageFooter_375x78%403x.png" />
+    <None Remove="Resources\ShareCardFor_ChouJiangHuoDong\page_bottom_250x52%403x.png" />
+    <None Remove="Resources\ShareCardFor_ChouJiangHuoDong\page_top_250x202%403x.png" />
+    <None Remove="Filters\" />
+    <None Remove="SixLabors.ImageSharp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\Fonts\PingFang Bold.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\PingFang Heavy.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\PingFang Medium.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Fonts\PingFang Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ShareCardFor_ChouJiangHuoDong\button_JinBiChouJiang_120x28@3x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\ShareCardFor_ChouJiangHuoDong\image_PageFooter_375x78@3x.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BaoXia.Constants" Version="1.0.8" />
+    <PackageReference Include="BaoXia.Utils" Version="1.0.75" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.0-preview.7.22376.2" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.0-preview.7.22376.2" />
+    <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="1.0.0-beta15" />
+    <PackageReference Include="SkiaSharp.NativeAssets.Linux.NoDependencies" Version="2.88.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Images\logo_CSharp_112x35.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ProjectExtensions><VisualStudio><UserProperties appsettings_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
+</Project>

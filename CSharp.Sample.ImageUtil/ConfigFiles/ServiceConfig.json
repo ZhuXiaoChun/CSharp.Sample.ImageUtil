@@ -1,0 +1,181 @@
+{
+        // 文件上传大小的最大值，单位为“MB”：
+        "FileUploadSizeInMBMax": 50,
+
+        // 是否启用更新前备份。
+        "IsFileBackupFirstUpdateSecondEnable": true,
+
+        /// 是否文件标签是必须的。
+        "IsFileTagNecessary": true,
+
+        // 文件上传规则。
+        "FilePathRules":
+        [
+
+                ////////////////////////////////////////////////
+                // 图片文件的默认上传配置信息：
+                ////////////////////////////////////////////////
+                {
+                        ////////////////////////////////////////////////
+                        // @路径匹配属性。
+                        ////////////////////////////////////////////////
+                        "FileExtensionNames":
+                        [
+                                "webp",
+                                "jpg",
+                                "jpeg",
+                                "gif",
+                                "png",
+                                "bmp"
+                        ],
+                        "FileTags":
+                        [
+                                "文章",
+                                "内容"
+                        ],
+
+                        ////////////////////////////////////////////////
+                        // @原始文件相关属性。
+                        ////////////////////////////////////////////////
+
+                        // 文件保存对相对路径格式化器。
+                        "FilePathFormatter": "files\\guideImages\\#FileTags()#\\#TimeStamp(yyyyMMdd)#\\#UserId(8)#_#FileId(8)#_#ImageSize()#.#FileExtensionName()#",
+
+                        // 对应上传文件后的Uri格式字符串。
+                        "FileAbsoluteUriFormatter": "//image.c#.com/#FileTags()#/#TimeStamp(yyyyMMdd)#/#UserId(8)#_#FileId(8)#_#ImageSize()#.#FileExtensionName()#",
+
+                        // WEBP图片的默认保存质量，取值范围：0-100。
+                        "ImageSaveQualityForWebpDefault": 90,
+
+                        // JPEG图片的默认保存质量，取值范围：0-100。
+                        "ImageSaveQualityForJpegDefault": 90,
+
+                        ////////////////////////////////////////////////
+                        // @列表图片相关属性。
+                        ////////////////////////////////////////////////
+
+                        // 对应上传文件后，自动产生的列表图片的相对路径格式字符串。
+                        "ListImageFilePathFormatter": "files\\guideImages\\#FileTags()#\\#TimeStamp(yyyyMMdd)#\\#UserId(8)#_#FileId(8)#_list_#ImageSize()#.#FileExtensionName()#",
+
+                        // 对应上传文件后，自动产生的列表图片的Uri格式字符串。
+                        "ListImageFileAbsoluteUriFormatter": "//image.c#.com/#FileTags()#/#TimeStamp(yyyyMMdd)#/#UserId(8)#_#FileId(8)#_list_#ImageSize()#.#FileExtensionName()#",
+
+                        // 列表图片的尺寸。
+                        "ListImageSize":
+                        {
+                                "Width": 200,
+                                "Height": 112
+                        },
+
+                        // 列表图片的格式。
+                        "ListImageFormat": "jpg",
+
+                        // 列表图片的默认保存质量，取值范围：0-100。
+                        "ListImageSaveQuality": 90,
+
+                        ////////////////////////////////////////////////
+                        // @内容图片相关属性。
+                        ////////////////////////////////////////////////
+
+                        // 对应上传文件后，自动产生的内容图片的相对路径格式字符串。
+                        "ContentImageFilePathFormatter": "files\\guideImages\\#FileTags()#\\#TimeStamp(yyyyMMdd)#\\#UserId(8)#_#FileId(8)#_content_#ImageSize()#.#FileExtensionName()#",
+
+                        // 对应上传文件后，自动产生的内容图片的Uri格式字符串。
+                        "ContentImageFileAbsoluteUriFormatter": "//image.c#.com/#FileTags()#/#TimeStamp(yyyyMMdd)#/#UserId(8)#_#FileId(8)#_content_#ImageSize()#.#FileExtensionName()#",
+
+                        // 内容图片的尺寸。
+                        "ContentImageSize":
+                        {
+                                "Width": 343,
+                                "Height": 186
+                        },
+
+                        // 内容图片的格式。
+                        "ContentImageFormat": "jpg",
+
+                        // 内容图片的保存质量，取值范围：0-100。
+                        "ContentImageSaveQuality": 90,
+
+                        // 水印信息数组。
+                        "ImageWatermarkInfes":
+                        [
+                                {
+                                        "MaxImageWidth": 200,
+                                        "MaxImageHeight": 0,
+
+                                        "WatermarkImageFilePath": "Resources/Images/logo_CSharp_112x35.png",
+
+                                        "WatermarkLayoutName": "HorizontalLayout",
+                                        "WatermarkLayoutAlignTypeName": "Center",
+                                        "IsWatermarkDrawImageFirst": true,
+                                        "WatermarkImageAndCaptionSeparatorSize": 2,
+                                        "WatermarkCaptionFontFileName": "PingFang Regular.ttf",
+                                        "WatermarkCaptionFontSize": 26.0,
+                                        "WatermarkCaptionColor": "rgba(255, 255, 255, 0.9)",
+                                        "WatermarkCaptionBorderSize": 3,
+                                        "WatermarkCaptionBorderColor": "rgba(0, 0, 0, 0.1)",
+
+                                        "AlignTypeNames": "right bottom",
+
+                                        "MarginLeft": 0,
+                                        "MarginTop": 0,
+                                        "MarginRight": 20,
+                                        "MarginBottom": 20
+                                },
+                                {
+                                        "MaxImageWidth": 0,
+                                        "MaxImageHeight": 0,
+
+                                        "WatermarkImageFilePath": "Resources/Images/logo_CSharp_112x35.png",
+
+                                        "WatermarkLayoutName": "HorizontalLayout",
+                                        "WatermarkLayoutAlignTypeName": "Center",
+                                        "IsWatermarkDrawImageFirst": true,
+                                        "WatermarkImageAndCaptionSeparatorSize": 2,
+                                        "WatermarkCaptionFontFileName": "PingFang Regular.ttf",
+                                        "WatermarkCaptionFontSize": 26.0,
+                                        "WatermarkCaptionColor": "rgba(255, 255, 255, 0.9)",
+                                        "WatermarkCaptionBorderSize": 2,
+                                        "WatermarkCaptionBorderColor": "rgba(0, 0, 0, 0.1)",
+
+                                        "AlignTypeNames": "right bottom",
+
+                                        "MarginLeft": 0,
+                                        "MarginTop": 0,
+                                        "MarginRight": 20,
+                                        "MarginBottom": 20
+                                }
+                        ]
+                },
+
+                ////////////////////////////////////////////////
+                // 默认文件的默认上传配置信息：
+                ////////////////////////////////////////////////
+                {
+                        ////////////////////////////////////////////////
+                        // @路径匹配属性。
+                        ////////////////////////////////////////////////
+                        "FileExtensionNames":
+                        [
+                                "zip",
+                                "rar"
+                        ],
+                        "FileTags":
+                        [
+                        ],
+
+                        ////////////////////////////////////////////////
+                        // @原始文件相关属性。
+                        ////////////////////////////////////////////////
+
+                        // 文件保存对相对路径格式化器。
+                        "FilePathFormatter": "default\\#FileTags()#\\#TimeStamp(yyyyMMdd)#\\#UserId(8)#_#FileId(8)#.#FileExtensionName()#"
+                }
+        ],
+
+        // 会话Token验证间隔秒数，“0“表示只验证一次，永远信任。
+        "AuthorizationTokenVerifyIntervalSeconds": 1800.0,
+
+        // 文件信息持久化间隔秒数。
+        "FileInfoStorageIntervalSeconds": 1.0
+}
